@@ -26,6 +26,18 @@ For example::
   sage: m.triangulation_isosig()
   'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa(2,3)'
 
+The iterator for the census is :code:`snappy.ElevenTetCuspedCensus`. For example::
+
+  sage: for M in snappy.ElevenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
+  o11_505343(0,0) 11.0017490870299
+  o11_505344(0,0) 11.0075240445813
+  o11_505345(0,0) 11.0075240445813
+
+  sage: for M in snappy.ElevenTetCuspedCensus(num_cusps=2)[-3:]: print(M, M.volume(), M.num_cusps())
+  o11_505349(0,0)(0,0) 11.0179027639862 2
+  o11_505350(0,0)(0,0) 11.0232112584876 2
+  o11_505351(0,0)(0,0) 11.0232112584876 2
+
 The raw source for the tables are in::
   
   manifold_src/original_manifold_sources
