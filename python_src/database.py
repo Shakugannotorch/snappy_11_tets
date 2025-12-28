@@ -28,7 +28,7 @@ def get_tables(ManifoldTable):
         can be triangulated with at most 10 ideal tetrahedra.
         """
         
-        _regex = re.compile(r'([msvt])([0-9]+)$|o9_\d\d\d\d\d$|o10_\d\d\d\d\d\d$')
+        _regex = re.compile(r'([msvt])([0-9]+)$|o9_\d\d\d\d\d$|o10_\d\d\d\d\d\d|o11_\d\d\d\d\d\d$')
 
         _select = 'select name, triangulation, isometryclass from %s '
         

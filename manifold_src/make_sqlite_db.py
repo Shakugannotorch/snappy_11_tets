@@ -93,7 +93,7 @@ def is_stale(dbfile, sourceinfo):
     return False
     
 if __name__ == '__main__':
-    manifold_db = '10_tet.sqlite'
+    manifold_db = '11_tet.sqlite'
     manifold_data = {'hyperbolic_cusped_census': {'csv_files': ['orientable_cusped_census.csv','orientable_cusped_census_10.csv', 'orientable_cusped_census_11.csv']}}
     
     if is_stale(manifold_db, manifold_data):
