@@ -2,10 +2,9 @@ The database for 11-tetrahedra census of orientable cusped hyperbolic 3-manifold
 ============================
 
 This repository stores the manifold database of a complete census of
-all orientable cusped hyperbolic 3-manifolds triangulizable by no more than 11 tetrahedra, 
+all 505352 orientable cusped hyperbolic 3-manifolds triangulizable by no more than 11 tetrahedra, 
 and includes the source code for the Python module
-:code:`snappy_11_tets` which packages them up for use in SnapPy and
-Spherogram.
+:code:`snappy_11_tets` which packages them up for use in SnapPy.
 
 To install the module in SageMath::
 
