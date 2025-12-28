@@ -76,7 +76,7 @@ class PipInstall(Command):
         check_call([python, 'setup.py', 'build'])
         if not self.no_build_wheel:
             check_call([python, 'setup.py', 'bdist_wheel', '--universal'])
-        egginfo = 'snappy_15_knots.egg-info'
+        egginfo = 'snappy_11_tets.egg-info'
         if os.path.exists(egginfo):
             shutil.rmtree(egginfo)
         wheels = glob.glob('dist' + os.sep + '*.whl')
@@ -94,7 +94,7 @@ class Test(Command):
     def run(self):
         build_lib_dir = os.path.join('build', 'lib')
         sys.path.insert(0, build_lib_dir)
-        from snappy_15_knots.test import run_tests
+        from snappy_11_tets.test import run_tests
         sys.exit(run_tests())
 
 # Get version number from module
