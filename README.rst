@@ -26,7 +26,7 @@ For example::
   sage: m.triangulation_isosig()
   'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa(2,3)'
 
-The iterator for this census is :code:`snappy.ElevenTetCuspedCensus`. For example::
+The iterator for all manifolds in this module is :code:`snappy.ElevenTetCuspedCensus`. For example::
 
   sage: for M in snappy.ElevenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
   o11_505343(0,0) 11.0017490870299
