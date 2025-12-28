@@ -45,7 +45,7 @@ class BuildPy(build_py):
             if self.force:
                 for file in glob.glob('*.sqlite'):
                     os.remove(file)
-            print('Rebuilding stale sqlite databases from csv sources...')
+            print('Rebuilding stale sqlite databases from csv sources if necessary...')
             check_call([sys.executable, 'make_sqlite_db.py'])
         os.chdir('..')
 
@@ -76,14 +76,14 @@ class PipInstall(Command):
         check_call([python, 'setup.py', 'build'])
         if not self.no_build_wheel:
             check_call([python, 'setup.py', 'bdist_wheel', '--universal'])
-        egginfo = 'snappy_manifolds.egg-info'
+        egginfo = 'snappy_15_knots.egg-info'
         if os.path.exists(egginfo):
             shutil.rmtree(egginfo)
         wheels = glob.glob('dist' + os.sep + '*.whl')
         new_wheel = max(wheels, key=os.path.getmtime)            
         check_call([python, '-m', 'pip', 'install', '--upgrade',
                     '--upgrade-strategy', 'only-if-needed',
-                    '--force-reinstall', new_wheel])
+                    new_wheel])
 
 class Test(Command):
     user_options = []
@@ -92,22 +92,22 @@ class Test(Command):
     def finalize_options(self):
         pass
     def run(self):
-        build_lib_dir = os.path.join(
-            'build',
-            'lib.{platform}-{version_info[0]}.{version_info[1]}'.format(
-                platform=sysconfig.get_platform(),
-                version_info=sys.version_info)
-        )
+        build_lib_dir = os.path.join('build', 'lib')
         sys.path.insert(0, build_lib_dir)
-        from snappy_manifolds.test import run_tests
+        from snappy_15_knots.test import run_tests
         sys.exit(run_tests())
 
+# Get version number from module
+version = re.search("__version__ = '(.*)'",
+                    open('python_src/__init__.py').read()).group(1)
 
 setup(
-    packages = ['snappy_manifolds', 'snappy_manifolds/sqlite_files'],
-    package_dir = {'snappy_manifolds':'python_src',
-                   'snappy_manifolds/sqlite_files':'manifold_src'},
-    package_data = {'snappy_manifolds/sqlite_files': sqlite_files},
+    name = 'snappy_11_tets',
+    version = version,
+    packages = ['snappy_11_tets', 'snappy_11_tets/sqlite_files'],
+    package_dir = {'snappy_11_tets':'python_src',
+                   'snappy_11_tets/sqlite_files':'manifold_src'},
+    package_data = {'snappy_11_tets/sqlite_files': sqlite_files},
     ext_modules = [],
     zip_safe = False,
     cmdclass = {'release': Release,
