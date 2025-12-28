@@ -18,11 +18,13 @@ To use this module with SnapPy, one can do::
 The extended census can then be accessed via SnapPy's :code:`Manifold` class. 
 For example::
 
-  sage: m = snappy.Manifold('o10_140311(1, 0)')
+  sage: m = snappy.Manifold('o11_123456')
   sage: m.triangulation_isosig()
-  'kLLLLQMkccefgihhjjjlnxcvsnwdau_baBb(1,0)'
-
-Furthermore, the peripheral information in the census below 10-tetrahedra was not stored.
+  'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa'
+  
+  sage: m = snappy.Manifold('o11_123456(2,3)')
+  sage: m.triangulation_isosig()
+  'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa(2,3)'
 
 The raw source for the tables are in::
   
