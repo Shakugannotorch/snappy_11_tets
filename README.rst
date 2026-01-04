@@ -5,7 +5,7 @@ This repository stores the manifold database of a complete census of
 all 505352 orientable cusped hyperbolic 3-manifolds whose minimal ideal triangulations consist of 11 tetrahedra, 
 and includes the source code for the Python module :code:`snappy_11_tets` which packages them up for use in SnapPy.
 
-The orientable cusped census of 10 tetrahedra has been merged into :code:`snappy_manifolds` in the release of version 1.4, 
+The orientable cusped census of 10 tetrahedra has been merged into :code:`snappy_manifolds` in its recent release of version 1.4, 
 and having both :code:`snappy_11_tets` and :code:`snappy_manifolds` installed allows one to access all orientable cusped hyperbolic 3-manifolds up to 11 tetrahedra.
 
 To install this module in SageMath::
