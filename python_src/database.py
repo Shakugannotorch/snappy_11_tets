@@ -77,11 +77,11 @@ def get_tables(ManifoldTable):
             cursor.execute(create_view_sql)
             cursor.close()
 
-            self._get_length()
-            self._get_max_volume()
-
             self._table = view_name
             self._select = f'select name, triangulation from {view_name} '
+
+            self._get_length()
+            self._get_max_volume()
 
     return [ElevenTetCuspedCensus()]
 
