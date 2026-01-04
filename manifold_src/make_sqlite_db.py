@@ -94,7 +94,7 @@ def is_stale(dbfile, sourceinfo):
     
 if __name__ == '__main__':
     manifold_db = '11_tet.sqlite'
-    manifold_data = {'hyperbolic_cusped_census': {'csv_files': ['orientable_cusped_census.csv','orientable_cusped_census_10.csv', 'orientable_cusped_census_11.csv']}}
+    manifold_data = {'orientable_cusped_census': {'csv_files': ['orientable_cusped_census_11.csv']}}
     
     if is_stale(manifold_db, manifold_data):
         if os.path.exists(manifold_db):
@@ -102,4 +102,4 @@ if __name__ == '__main__':
         with sqlite3.connect(manifold_db) as connection:
             for tablename, args in manifold_data.items():
                 make_table(connection, tablename, **args)
-            connection.execute(" create view hyperbolic_cusped_census_view as select * from hyperbolic_cusped_census ")
+            connection.execute(f" create view {tablename}_view as select * from {tablename} ")
