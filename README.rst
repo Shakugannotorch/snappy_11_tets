@@ -30,6 +30,10 @@ For example::
 The iterator for all manifolds in this module, along with those in :code:`snappy_manifolds`, is :code:`snappy.ElevenTetCuspedCensus`. 
 For example::
 
+  sage:
+   len(snappy.ElevenTetCuspedCensus)
+  717993
+
   sage: for M in snappy.ElevenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
   o11_505343(0,0) 11.0017490870299
   o11_505344(0,0) 11.0075240445813

@@ -4,7 +4,7 @@ def version():
     return __version__
 
 import sys
-from .database import get_tables
+from .database import get_tables, manifolds_path, original_manifolds_path
 
 try:
     import snappy
