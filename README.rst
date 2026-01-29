@@ -1,5 +1,5 @@
 The database for 11-tetrahedra census of orientable cusped hyperbolic 3-manifolds
-============================
+=================================================================================
 
 This repository stores the manifold database of a complete census of
 all 505352 orientable cusped hyperbolic 3-manifolds whose minimal ideal triangulations consist of 11 tetrahedra, 
