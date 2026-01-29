@@ -108,6 +108,7 @@ setup(
     package_dir = {'snappy_11_tets':'python_src',
                    'snappy_11_tets/sqlite_files':'manifold_src'},
     package_data = {'snappy_11_tets/sqlite_files': sqlite_files},
+    install_requires = ['snappy_manifolds>=1.4'],
     ext_modules = [],
     zip_safe = False,
     cmdclass = {'release': Release,

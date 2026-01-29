@@ -23,6 +23,9 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Mathematics",
 ]
 dynamic = ["version"]
+dependencies = [
+    "snappy_manifolds>=1.4"
+]
 
 [project.urls]
 Homepage = "https://github.com/Shakugannotorch/snappy_11_tets"
