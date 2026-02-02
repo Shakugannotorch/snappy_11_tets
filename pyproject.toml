@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "setuptools>=59", 
+    "setuptools>=77.0.3", 
 ]
 build-backend = "setuptools.build_meta"
 
@@ -29,6 +29,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/Shakugannotorch/snappy_11_tets"
+Repository = "https://github.com/Shakugannotorch/snappy_11_tets.git"
 
 [tool.setuptools.dynamic]
 version = {attr = "snappy_11_tets.__version__"}

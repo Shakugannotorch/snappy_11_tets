@@ -25,7 +25,7 @@ def get_tables(ManifoldTable):
     manifolds_src, and returns them all as a list.
     """
 
-    class ElevenTetCuspedCensus(ManifoldTable):
+    class OrientableCuspedCensus(ManifoldTable):
         """ 
         Iterator for all orientable cusped hyperbolic manifolds that
         can be triangulated with at most 11 ideal tetrahedra.
@@ -83,7 +83,7 @@ def get_tables(ManifoldTable):
             self._get_length()
             self._get_max_volume()
 
-    return [ElevenTetCuspedCensus()]
+    return [OrientableCuspedCensus()]
 
 
 def connect_to_db(db_path):
