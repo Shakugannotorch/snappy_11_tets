@@ -20,9 +20,9 @@ def get_tables(ManifoldTable):
     Functions such as this one are meant to be called in the
     __init__.py module in snappy proper.  To avoid circular imports,
     it takes as argument the class ManifoldTable from database.py in
-    snappy. From there, it builds all of the Manifold tables from the
-    sqlite databases manifolds.sqlite and more_manifolds.sqlite in
-    manifolds_src, and returns them all as a list.
+    snappy. From there, it builds all of the Manifold tables, for example
+    here from the sqlite 11_tet.sqlite in manifolds_src and manifolds.sqlite
+    from snappy_manifolds, and returns the merged table as an element in a list.
     """
 
     class OrientableCuspedCensus(ManifoldTable):

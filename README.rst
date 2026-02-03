@@ -15,32 +15,32 @@ The above command should be able to automatically install the 1.4 version of :co
 
 To use this module with SnapPy, one can do::
 
-  sage: import snappy_11_tets, snappy
+  >>> import snappy_11_tets, snappy
 
 The extended census can then be accessed via SnapPy's :code:`Manifold` class. 
 For example::
 
-  sage: m = snappy.Manifold('o11_123456')
-  sage: m.triangulation_isosig()
+  >>> m = snappy.Manifold('o11_123456')
+  >>> m.triangulation_isosig()
   'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa'
 
-  sage: m = snappy.Manifold('o11_123456(2,3)')
-  sage: m.triangulation_isosig()
+  >>> m = snappy.Manifold('o11_123456(2,3)')
+  >>> m.triangulation_isosig()
   'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa(2,3)'
 
 The iterator for all manifolds in this module, along with those in :code:`snappy_manifolds`, is :code:`snappy.ElevenTetCuspedCensus`. 
 For example::
 
-  sage:
+  >>>
    len(snappy.ElevenTetCuspedCensus)
   717993
 
-  sage: for M in snappy.ElevenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
+  >>> for M in snappy.ElevenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
   o11_505343(0,0) 11.0017490870299
   o11_505344(0,0) 11.0075240445813
   o11_505345(0,0) 11.0075240445813
 
-  sage: for M in snappy.ElevenTetCuspedCensus(num_cusps=2)[-3:]: print(M, M.volume(), M.num_cusps())
+  >>> for M in snappy.ElevenTetCuspedCensus(num_cusps=2)[-3:]: print(M, M.volume(), M.num_cusps())
   o11_505349(0,0)(0,0) 11.0179027639862 2
   o11_505350(0,0)(0,0) 11.0232112584876 2
   o11_505351(0,0)(0,0) 11.0232112584876 2
