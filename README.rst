@@ -7,9 +7,13 @@ and includes the source code for the Python module :code:`snappy_11_tets` which 
 
 The orientable cusped census of 10 tetrahedra has been merged into :code:`snappy_manifolds` in its recent release of version 1.4, and now comes with SnapPy version 3.3 automatically, see `SnapPy's News page <https://snappy.computop.org/news.html>`_ for details.
 
-To install this module in SageMath::
+To install this package, do::
 
-  sage -pip install git+https://github.com/Shakugannotorch/snappy_11_tets/
+  python -m pip install --upgrade --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ snappy_11_tets
+
+or, if you are using SageMath::
+
+  sage -pip install --upgrade --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ snappy_11_tets
 
 The above command should be able to automatically install the 1.4 version of :code:`snappy_manifolds`, if it is not readily installed.
 
