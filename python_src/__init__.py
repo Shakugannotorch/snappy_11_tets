@@ -1,4 +1,4 @@
-__version__ = '1.16b'
+__version__ = '1.17b'
 
 def version():
     return __version__
@@ -14,4 +14,4 @@ try:
         if name not in snappy.database_objects:
             snappy.database_objects.append(name)
 except ImportError:
-    raise RuntimeError('Error happened when loading 11 tet census data to SnapPy')
+    pass
