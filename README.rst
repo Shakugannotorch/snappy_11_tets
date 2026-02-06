@@ -19,7 +19,12 @@ The above command should be able to automatically install the 1.4 version of :co
 
 To use this module with SnapPy, one can do::
 
-  >>> import snappy_11_tets, snappy
+  >>> import snappy
+  >>> snappy.database.add_tables_from_package('snappy_11_tets', False)
+  >>> for name, table in table_dict.items():
+        setattr(snappy, name, table)
+        if name not in snappy.database_objects:
+            snappy.database_objects.append(name)
 
 The extended census can then be accessed via SnapPy's :code:`Manifold` class. 
 For example::
