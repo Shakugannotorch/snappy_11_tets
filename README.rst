@@ -32,19 +32,19 @@ For example::
   >>> m.triangulation_isosig()
   'lLALPzAMccbbegfhihjkkhhrwahhxrxhw_BbBa(2,3)'
 
-The iterator for all manifolds in this module, along with those in :code:`snappy_manifolds`, is :code:`snappy.ElevenTetCuspedCensus`. 
+The iterator for all manifolds in this module, along with those in :code:`snappy_manifolds`, is :code:`snappy.OrientableCuspedCensus`. 
 For example::
 
   >>>
-   len(snappy.ElevenTetCuspedCensus)
+   len(snappy.OrientableCuspedCensus)
   717993
 
-  >>> for M in snappy.ElevenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
+  >>> for M in snappy.OrientableCuspedCensus[-9:-6]: print(M, M.volume()) 
   o11_505343(0,0) 11.0017490870299
   o11_505344(0,0) 11.0075240445813
   o11_505345(0,0) 11.0075240445813
 
-  >>> for M in snappy.ElevenTetCuspedCensus(num_cusps=2)[-3:]: print(M, M.volume(), M.num_cusps())
+  >>> for M in snappy.OrientableCuspedCensus(num_cusps=2)[-3:]: print(M, M.volume(), M.num_cusps())
   o11_505349(0,0)(0,0) 11.0179027639862 2
   o11_505350(0,0)(0,0) 11.0232112584876 2
   o11_505351(0,0)(0,0) 11.0232112584876 2
