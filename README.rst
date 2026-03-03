@@ -9,11 +9,11 @@ The orientable cusped census of 10 tetrahedra has been merged into :code:`snappy
 
 To install this package, do::
 
-  python -m pip install --upgrade --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ snappy_11_tets
+  python -m pip install --upgrade snappy_11_tets
 
 or, if you are using SageMath::
 
-  sage -pip install --upgrade --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ snappy_11_tets
+  sage -pip install --upgrade snappy_11_tets
 
 The above command should be able to automatically install the 1.4 version of :code:`snappy_manifolds`, if it is not readily installed.
 
