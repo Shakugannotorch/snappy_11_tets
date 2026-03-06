@@ -17,11 +17,21 @@ or, if you are using SageMath::
 
 The above command should be able to automatically install the 1.4 version of :code:`snappy_manifolds`, if it is not readily installed.
 
-To use this module with SnapPy, one can do::
+To use this module with SnapPy, you need to have SnapPy version 3.3.2 or later installed. You can check your SnapPy version with::
 
-  >>> import snappy, snappy_11_tets
+  >>> import snappy
+  >>> snappy.__version__
+  '3.3.2'
 
-The extended census can then be accessed via SnapPy's :code:`Manifold` class. 
+If you have an older version of SnapPy, you can upgrade it with::
+
+  python -m pip install --upgrade snappy
+
+or, if you are using SageMath::
+
+  sage -pip install --upgrade snappy
+
+With the above setup, simply importing :code:`snappy` will automatically import :code:`snappy_11_tets` and make the extended census available in SnapPy. The extended census can then be accessed via SnapPy's :code:`Manifold` class. 
 For example::
 
   >>> m = snappy.Manifold('o11_123456')
@@ -35,8 +45,7 @@ For example::
 The iterator for all manifolds in this module, along with those in :code:`snappy_manifolds`, is :code:`snappy.OrientableCuspedCensus`. 
 For example::
 
-  >>>
-   len(snappy.OrientableCuspedCensus)
+  >>> len(snappy.OrientableCuspedCensus)
   717993
 
   >>> for M in snappy.OrientableCuspedCensus[-9:-6]: print(M, M.volume()) 
